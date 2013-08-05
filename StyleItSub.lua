@@ -4,7 +4,7 @@
 --
 
 script_name = "StyleItSub"
-script_description = "An Aegisub Lua script with simple UI, that allows users to add custom styles to specific words/names."
+script_description = "Uma macro com uma simples interface, que permite adicionar estilos personalizados a palavras específicas."
 script_author = "Ghasan Al-Sakkaf (Gh.S) & Leinad4Mind"
 script_version = "1.6"
 
@@ -14,12 +14,12 @@ function WhatToDo(subtitles, selected_lines, active_line)
 	local clrdef
 	local l
 
-	local t = {		{class = "label", x = 1, y = 0, label = "\nNome/Word\n"},
-					{class="edit", name="edit1", hint="Enter name/word. Case sensetive.", x=0, y=0},
+	local t = {		{class = "label", x = 1, y = 0, label = "\nNome/Palavra\n"},
+					{class="edit", name="edit1", hint="Introduza palavra. Com distinção entre maiúsculas e minúsculas.", x=0, y=0},
 					{class="checkbox", name="chkcolor", hint="Check if you want to apply the custom color.", x=0, y=1, label = "Color:"},
-					{class="color", name="color1", hint="Chose the prefered color.", x=1, y=1},
+					{class="color", name="color1", hint="Escolha a cor.", x=1, y=1},
 					{class="checkbox", name="chkcus", hint="Check if you want to apply the custom changes.", x=0, y=2, label = "Custom:"},
-					{class="edit", name="edit2", hint="Put before an {\\tag}", x=1, y=2}
+					{class="edit", name="edit2", hint="Colocar antes um {\\tag}", x=1, y=2}
 				}
 		
 	local pushbut, values = aegisub.dialog.display(t)
